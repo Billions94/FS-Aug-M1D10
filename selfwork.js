@@ -110,17 +110,22 @@ function title(head) {
 }
 
 title(`31`)
+function getElementFromContainer(){
+    let element = document.getElementById("container")
+}
+title(`32`)
+function getTd(){
+    let element = document.querySelectorAll("td")
+  
+}
+
+title(`33`)
 function td(){
     let tdNode = document.getElementsByTagName('td')
     for (let i = 0; i < tdNode.length; i++) {
         tdNode[i].innerText = `'I'm so sad `       
     }
     
-}
-title(`32`)
-function getTd(){
-    let element = document.querySelectorAll("td")
-  
 }
 
 
@@ -142,28 +147,35 @@ function addRow(){
 title(`36`)
 function addClass(){
     let classNode = document.getElementsByTagName('tr')
-
     for (let i = 0; i < classNode.length; i++) {
-        classNode[i].classList.add('test')
- }
+        classNode[i].className = "test"
+   }
+}
 
+ title(`37`)
  function changeLinkBg(){
     let linkBgNode = document.getElementsByTagName('a')
     for (let i = 0; i < linkBgNode.length; i++) {
-        linkBgNode[i].classList.add('redbackground')
-        
+        linkBgNode[i].style.backgroundColor = "red"
     }
 }
 
-function addUlElement(){
-    let ulNode = document.getElementsByTagName('ul')
-    let newItem = document.createElement('li')
-    newItem.innerHTML = "Run far away"
-    ulNode.appendChild(newItem)
 
-
-
+title(`38`)
+function addNewUl(){
+    let newUl = document.querySelector("ul")
+    let newUlNode = document.createElement("li")
+    newUlNode.innerText = "The new me"
+    newUl.appendChild(newUlNode)
 }
+
+title(`39`)
+
+title(`40`)
+
+
+
+
 
 
 

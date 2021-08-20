@@ -30,9 +30,9 @@
  h1 {
      text-align: center;
  }
- /* a {
-     color: red;
- } */
+a {
+    color: red;
+}
 
  p {
     display: block;
