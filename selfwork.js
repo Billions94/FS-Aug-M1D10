@@ -6,7 +6,7 @@
 24) Create an array with 10 strings in it
 25) Print in the console every string in the previous array
 26) Create an array with 100 random numbers in it
-27) Wrote a function to get the MAX and the MIN from the previously created array
+27) Write a function to get the MAX and the MIN from the previously created array
 28) Create an array of arrays, in which every array has 10 random numbers
 29) Create a function that gets 2 arrays and returns the longest one
 30) Create a function that gets 2 arrays of numbers and returns the one with the higher sum of values*/
@@ -19,9 +19,9 @@ console.log("John<>Doe")
 
 title(`22`)
 let object = {
-       name: "Alexander",
-       surname: "Egbedi",
-       email: "e.a.egbedi@gmail.com"
+    name: "Alexander",
+    surname: "Egbedi",
+    email: "e.a.egbedi@gmail.com"
 }
 console.log(object)
 
@@ -49,28 +49,33 @@ console.log(array)
 
 title(`26`)
 let arr = [];
-while(arr.length < 100){
+while (arr.length < 100) {
     let rnd = Math.floor(Math.random() * 100) + 1;
-    if(arr.indexOf(rnd) === -1) arr.push(rnd);
+    if (arr.indexOf(rnd) === -1) arr.push(rnd);
 }
 console.log(arr);
 
 title(`27`)
-function getArrayMax(array){
-    return Math.max.apply(null, array);
- }
- function getArrayMin(array){
-    return Math.min.apply(null, array);
+function getMinAndMax(array){
+    let min = 0;
+    let max = 0;
+    for (let i = 0; i < array.length; i++){
+        if (array[i] < min){
+            min = array[i];
+        }
+        else if (array[i] > max){
+            max = array[i];
+        }
+    }
+    console.log(`Min is: ${min} Max is ${max}`)  
 }
-console.log(getArrayMax(arr))
-console.log(getArrayMin(arr))
-
+getMinAndMax(arr)
 title(`28`)
 let arrayOfArrays = []
-for (let i = 0; i < 1; i++){
+for (let i = 0; i < 1; i++) {
     let currentArray = []
     for (let j = 0; j < 10; j++) {
-        currentArray.push(Math.floor(Math.random() * 10) + 10)
+        currentArray.push(Math.floor(Math.random() * 10))
         arrayOfArrays.push(currentArray)
     }
 }
@@ -78,15 +83,18 @@ console.log(arrayOfArrays)
 
 title(`29`)
 function longestArray(arr1, arr2) {
-    if (arr1.length > arr2.length){
+    if (arr1.length > arr2.length) {
         return arr1
     }
     else {
         return arr2
     }
-    
+
 }
-console.log(longestArray([1,2,3,4,5],[1,2]))
+console.log(longestArray([1, 2, 3, 4, 5], [1, 2]))
+
+title(`30`)
+
 
 
 
@@ -110,68 +118,74 @@ function title(head) {
 }
 
 title(`31`)
-function getElementFromContainer(){
+function getElementFromContainer() {
     let element = document.getElementById("container")
 }
+
 title(`32`)
-function getTd(){
+function getTd() {
     let element = document.querySelectorAll("td")
-  
 }
 
 title(`33`)
-function td(){
+function td() {
     let tdNode = document.getElementsByTagName('td')
     for (let i = 0; i < tdNode.length; i++) {
-        tdNode[i].innerText = `'I'm so sad `       
+        tdNode[i].innerText = `'I'm so sad `
     }
-    
 }
 
 
 title(`34`)
-function changeHeader(){
+function changeHeader() {
     let changeH1 = document.querySelector("h1")
     changeH1.innerHTML = "I think i broke my ass"
 }
 
 title(`35`)
-function addRow(){
+function addRow() {
     let addRowNode = document.querySelector("table")
     let newElement = document.createElement("tr")
-         newElement.innerHTML = "I am the new row"
-         addRowNode.appendChild(newElement)
-         
+    newElement.innerHTML = "I am the new row"
+    addRowNode.appendChild(newElement)
 }
 
 title(`36`)
-function addClass(){
+function addClass() {
     let classNode = document.getElementsByTagName('tr')
     for (let i = 0; i < classNode.length; i++) {
         classNode[i].className = "test"
-   }
+    }
 }
 
- title(`37`)
- function changeLinkBg(){
+title(`37`)
+function changeLinkBg() {
     let linkBgNode = document.getElementsByTagName('a')
     for (let i = 0; i < linkBgNode.length; i++) {
         linkBgNode[i].style.backgroundColor = "red"
     }
 }
 
-
 title(`38`)
-function addNewUl(){
+
+function loadPage() {
+    console.log("Page is loaded")
+}
+
+title(`39`)
+function addNewUl() {
     let newUl = document.querySelector("ul")
     let newUlNode = document.createElement("li")
     newUlNode.innerText = "The new me"
     newUl.appendChild(newUlNode)
 }
 
-title(`39`)
-
 title(`40`)
+
+function emptyList() {
+    let removeList = document.getElementsByTagName("ul")
+    removeList[0].innerText = ''
+}
 
 
 
@@ -194,10 +208,29 @@ title(`40`)
 49) Write a function to add a table with 4 rows and 3 columns programmatically
 50) Write a function to remove the table from the page*/
 
+function mouserOver() {
+    let elements = document.querySelectorAll('a')
+    for (let i = 0; i < elements.length; i++) {
+        elements[i].addEventListener("mouseover", function(event) { 
+            alert(HI) })
+   }
+}
+
+function hideImages() {
+    let hideImg = document.getElementsByTagName('img')
+    for (let i = 0; i < hideImg.length; i++) {
+        hideImg[i].classList.add('hidden')
+    }
+}
+
+function hideTable(){
+    let hideTab = document.getElementsByTagName("li")
+    for (let i = 0; i < hideTab.length; i++)
+    hideTab.classList.add('hidden')
+}
 
 
-
-
-
-
-
+window.onload = function() {
+    loadPage()
+    mouserOver()
+}
