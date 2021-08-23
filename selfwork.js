@@ -94,9 +94,29 @@ function longestArray(arr1, arr2) {
 console.log(longestArray([1, 2, 3, 4, 5], [1, 2]))
 
 title(`30`)
+// 30) Create a function that gets 2 arrays of numbers and returns the one with the higher sum of values
+function returnSumWithHigherValues(){
+    let higherSum = ''
+    let array1 = [10,20,5,17,5]
+    let array2 = [10,3,5,8,31]
 
+   for (let i = 0; i < arr.length; i++) {
+          array1 += arr[i]
+   }
 
+   for (let i = 0; i < arr.length; i++){
+         array2 += arr[i]
+   }
+   if (array1 > array2){
+       higherSum = array1
+   }
+   else {
+       higherSum = array2
+   }
 
+ return higherSum
+}
+returnSumWithHigherValues(higherSum)
 
 
 /* DOM 
@@ -208,29 +228,44 @@ function emptyList() {
 49) Write a function to add a table with 4 rows and 3 columns programmatically
 50) Write a function to remove the table from the page*/
 
-function mouserOver() {
-    let elements = document.querySelectorAll('a')
-    for (let i = 0; i < elements.length; i++) {
-        elements[i].addEventListener("mouseover", function(event) { 
-            alert(HI) })
-   }
+function addEventListener(){
+    let addEvent = document.querySelectorAll('.link')
+    
+    for (let i = 0; i < addEvent.length; i++){
+        addEvent[i].addEventListener('mouseover', function(e){
+            alert(addEvent[i].getAttribute('href'))
+        })
+    }
 }
 
-function hideImages() {
-    let hideImg = document.getElementsByTagName('img')
-    for (let i = 0; i < hideImg.length; i++) {
-        hideImg[i].classList.add('hidden')
+function hideImages(){
+    let hideImageNode = document.querySelectorAll('img')
+
+    for (let i = 0; i < hideImageNode.length; i++){
+        hideImageNode[i].classlist.add('hidden')
     }
 }
 
 function hideTable(){
-    let hideTab = document.getElementsByTagName("li")
-    for (let i = 0; i < hideTab.length; i++)
-    hideTab.classList.add('hidden')
+    let hideTableNode = document.querySelector('table')
+       hideTableNode.classlist.toggle('hidden')
 }
+
+function deleteLastLaterOfTitle(){
+    let deleteTitle = document.querySelector('h1')
+      deleteTitle.slice(0, deleteTitle.length -1)
+}
+
+
+function changeTd(){
+      let changeTdNode = document.querySelector('')
+}
+
+
 
 
 window.onload = function() {
     loadPage()
-    mouserOver()
+    addEventListener()
+    deleteLastLaterOfTitle()
 }

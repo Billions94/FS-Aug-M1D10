@@ -14,8 +14,6 @@
 
  table {
      background-color: rgb(110, 212, 136);
-     border-color: rgb(15, 15, 15);
-     color: rgb(12, 11, 11);
      border-radius: 12px;
      border-collapse: collapse;
  }
@@ -41,14 +39,16 @@ a {
     margin: 10px;
  }
 
+ td {
+     border: 2px dotted rgb(187, 119, 30);  
+ }
+
  tr {
-     border: 1px;
-     border-color: rgb(209, 78, 17);
-     
-     
+    border: 2px dotted rgb(233, 147, 36); 
  }
 
  .font {
-     font-size: 12px;
+     font-size: 20px;
+     font-style: bold;
      
  }
