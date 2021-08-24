@@ -95,28 +95,28 @@ console.log(longestArray([1, 2, 3, 4, 5], [1, 2]))
 
 title(`30`)
 // 30) Create a function that gets 2 arrays of numbers and returns the one with the higher sum of values
-function returnSumWithHigherValues(){
-    let higherSum = ''
-    let array1 = [10,20,5,17,5]
-    let array2 = [10,3,5,8,31]
+// function returnSumWithHigherValues(){
+//     let higherSum = ''
+//     let array1 = []
+//     let array2 = []
 
-   for (let i = 0; i < arr.length; i++) {
-          array1 += arr[i]
-   }
+//    for (let i = 0; i < arr.length; i++) {
+//           array1 += arr[i]
+//    }
 
-   for (let i = 0; i < arr.length; i++){
-         array2 += arr[i]
-   }
-   if (array1 > array2){
-       higherSum = array1
-   }
-   else {
-       higherSum = array2
-   }
+//    for (let i = 0; i < arr.length; i++){
+//          array2 += arr[i]
+//    }
+//    if (array1 > array2){
+//        higherSum = array1
+//    }
+//    else {
+//        higherSum = array2
+//    }
 
- return higherSum
-}
-returnSumWithHigherValues(higherSum)
+//  return higherSum
+// }
+// returnSumWithHigherValues()
 
 
 /* DOM 
@@ -182,7 +182,7 @@ title(`37`)
 function changeLinkBg() {
     let linkBgNode = document.getElementsByTagName('a')
     for (let i = 0; i < linkBgNode.length; i++) {
-        linkBgNode[i].style.backgroundColor = "red"
+        linkBgNode[i].style.backgroundColor = 'red'
     }
 }
 
@@ -228,6 +228,7 @@ function emptyList() {
 49) Write a function to add a table with 4 rows and 3 columns programmatically
 50) Write a function to remove the table from the page*/
 
+title(`41`)
 function addEventListener(){
     let addEvent = document.querySelectorAll('.link')
     
@@ -238,25 +239,30 @@ function addEventListener(){
     }
 }
 
+title(`42`)
 function hideImages(){
-    let hideImageNode = document.querySelectorAll('img')
+    let hideImageNode = document.getElementsByTagName('img')
 
     for (let i = 0; i < hideImageNode.length; i++){
-        hideImageNode[i].classlist.add('hidden')
+        hideImageNode[i].classList.add('hidden')
     }
 }
 
+title(`43`)
 function hideTable(){
     let hideTableNode = document.querySelector('table')
-       hideTableNode.classlist.toggle('hidden')
+       hideTableNode.classList.toggle('hidden')
 }
 
+title(`44`)
 function deleteLastLaterOfTitle(){
     let deleteTitle = document.querySelector('h1')
-      deleteTitle.slice(0, deleteTitle.length -1)
+      deleteTitle[]
 }
 
+title(`45`)
 
+title(`46`)
 function changeTd(){
       let changeTdNode = document.querySelector('')
 }
@@ -267,5 +273,5 @@ function changeTd(){
 window.onload = function() {
     loadPage()
     addEventListener()
-    deleteLastLaterOfTitle()
+    // deleteLastLaterOfTitle()
 }

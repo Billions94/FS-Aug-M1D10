@@ -12,43 +12,54 @@
         20) Add a dotted red border to each tr (note: tr does not accept a border property ;-) )
  */
 
- table {
-     background-color: rgb(110, 212, 136);
-     border-radius: 12px;
-     border-collapse: collapse;
- }
-
-
- 
-
- body {
-     max-width: 796px;
-     margin: 0 auto;
- }
-
- h1 {
-     text-align: center;
-     cursor: pointer;
- }
-a {
-    color: red;
+table {
+  background-color: rgb(6, 29, 12);
+  border-radius: 12px;
+  border-collapse: collapse;
+  color: white;
+  border: 2px dotted rgb(187, 119, 30);
 }
 
- p {
-    display: block;
-    margin: 10px;
- }
+ol {
+  border-radius: 12px;  
+  border: 2px dotted rgb(187, 119, 30);
+  color: red;
+  margin: 2px;
+}
 
- td {
-     border: 2px dotted rgb(187, 119, 30);  
- }
+ol li {
+  border-radius: 8px; 
+  border: inherit;
+  margin: 5px;
+}
 
- tr {
-    border: 2px dotted rgb(233, 147, 36); 
- }
+body {
+  max-width: 796px;
+  margin: 0 auto;
+}
 
- .font {
-     font-size: 20px;
-     font-style: bold;
-     
- }
+h1 {
+  text-align: center;
+  cursor: pointer;
+}
+a {
+  color: blue;
+}
+
+p {
+  display: block;
+  margin: 10px;
+}
+
+td {
+  border: 2px dotted rgb(187, 119, 30);
+}
+
+td tr {
+    border: inherit;
+}
+
+.font {
+  font-size: 20px;
+  font-style: bold;
+}
