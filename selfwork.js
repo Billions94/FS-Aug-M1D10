@@ -286,6 +286,20 @@ function changeTd(){
 }
 changeTd()
 
+ // 47) Add a button DELETE, on click it should delete a random TD from the page
+ const deleteRandom = function () {
+    const btn = document.createElement("button");
+    btn.innerText = "Delete random";
+    btn.onclick = function () {
+      const tds = document.querySelectorAll("td");
+      const random = Math.floor(Math.random() * tds.length);
+      tds[random].remove()
+    }
+    const body = document.querySelector("body");
+    body.appendChild(btn)
+  }
+ 
+
 
 
 
@@ -293,4 +307,5 @@ window.onload = function() {
     loadPage()
     addEventListener()
     // deleteLastLaterOfTitle()
+    deleteRandom()
 }
