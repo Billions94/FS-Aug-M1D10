@@ -15,7 +15,7 @@ title(`21`)
 let x = "John"
 let y = "Doe"
 
-console.log("John<>Doe")
+console.log(x + "<>" + y)
 
 title(`22`)
 let object = {
@@ -43,9 +43,12 @@ let array = [
     "Oslo",
     "Helsinki",
 ]
+console.log(array)
 
 title(`25`)
-console.log(array)
+for (let string of array) {
+    console.log(string)
+}
 
 title(`26`)
 let arr = [];
@@ -72,12 +75,12 @@ function getMinAndMax(array){
 getMinAndMax(arr)
 title(`28`)
 let arrayOfArrays = []
-for (let i = 0; i < 1; i++) {
+for (let i = 0; i < 10; i++) {
     let currentArray = []
     for (let j = 0; j < 10; j++) {
-        currentArray.push(Math.floor(Math.random() * 10))
-        arrayOfArrays.push(currentArray)
+        currentArray.push(Math.floor(Math.random() * 10))    
     }
+    arrayOfArrays.push(currentArray)
 }
 console.log(arrayOfArrays)
 
@@ -95,28 +98,18 @@ console.log(longestArray([1, 2, 3, 4, 5], [1, 2]))
 
 title(`30`)
 // 30) Create a function that gets 2 arrays of numbers and returns the one with the higher sum of values
-// function returnSumWithHigherValues(){
-//     let higherSum = ''
-//     let array1 = []
-//     let array2 = []
-
-//    for (let i = 0; i < arr.length; i++) {
-//           array1 += arr[i]
-//    }
-
-//    for (let i = 0; i < arr.length; i++){
-//          array2 += arr[i]
-//    }
-//    if (array1 > array2){
-//        higherSum = array1
-//    }
-//    else {
-//        higherSum = array2
-//    }
-
-//  return higherSum
-// }
-// returnSumWithHigherValues()
+function higherSum(array1, array2) {
+       let sum1 = 0;
+       for (let number of array1){
+           sum1 += number
+       }
+       let sum2 = 0;
+       for (let number of array2){
+           sum2 += number
+       }
+       return sum1 >= sum2 ? sum1 : sum2
+}
+console.log(higherSum([100,99,3], [2,200,50]))
 
 
 /* DOM 
@@ -138,14 +131,13 @@ function title(head) {
 }
 
 title(`31`)
-function getElementFromContainer() {
-    let element = document.getElementById("container")
-}
+    
+let element = document.getElementById("container")
+
 
 title(`32`)
-function getTd() {
-    let element = document.querySelectorAll("td")
-}
+
+let tabledata = document.querySelectorAll("td")
 
 title(`33`)
 function td() {
@@ -164,10 +156,14 @@ function changeHeader() {
 
 title(`35`)
 function addRow() {
-    let addRowNode = document.querySelector("table")
-    let newElement = document.createElement("tr")
-    newElement.innerHTML = "I am the new row"
-    addRowNode.appendChild(newElement)
+    let table = document.querySelector("table")
+    let tr = document.createElement("tr")
+      for (let i = 0; i < 5; i++){
+          let tds = document.createElement("td")
+          tds.innerText = 'ya dn know'
+          tr.appendChild(tds)
+      }
+      table.appendChild(tr)
 }
 
 title(`36`)
@@ -244,7 +240,7 @@ function hideImages(){
     let hideImageNode = document.getElementsByTagName('img')
 
     for (let i = 0; i < hideImageNode.length; i++){
-        hideImageNode[i].classList.add('hidden')
+        hideImageNode[i].classList.toggle('hidden')
     }
 }
 
@@ -255,17 +251,40 @@ function hideTable(){
 }
 
 title(`44`)
-function deleteLastLaterOfTitle(){
-    let deleteTitle = document.querySelector('h1')
-      deleteTitle[]
+function sumNunTd(){
+    let sumTDNode = document.getElementsByTagName('td')
+    let sum = 0
+    sumTDNode.forEach((td)=> {
+      const toNumber = parseInt(td.innerText);
+        const isNotNumeric = isNaN(toNumber);
+        if (!isNotNumeric) {
+        sum += toNumber;
+        }
+  })
+  alert(sum);
 }
 
+
 title(`45`)
+function deleteLastCharOfTitle(){
+    let h1 = document.querySelector("h1")
+        h1.innerText = h1.innerText.substring(0, h1.innerText.length -1)
+      
+}
+
+
 
 title(`46`)
 function changeTd(){
-      let changeTdNode = document.querySelector('')
+    let changeTableBg = document.getElementsByTagName('td')
+       changeTableBg.forEach(() => {
+           td.onclick = function (e) {
+               e.target.classList.toggle('red')
+           }
+       })
+    
 }
+changeTd()
 
 
 

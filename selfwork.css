@@ -13,11 +13,11 @@
  */
 
 table {
-  background-color: rgb(6, 29, 12);
+  /* background-color: rgb(6, 29, 12); */
   border-radius: 12px;
   border-collapse: collapse;
-  color: white;
-  border: 2px dotted rgb(187, 119, 30);
+  color: black;
+  /* border: 2px dotted rgb(187, 119, 30); */
 }
 
 ol {
@@ -52,14 +52,29 @@ p {
 }
 
 td {
-  border: 2px dotted rgb(187, 119, 30);
+  border: 1px solid black;
+  min-width: 140px;
+  height: 120px;
 }
 
-td tr {
-    border: inherit;
+
+/* tr td:first-child {
+  border-left: 1px dotted red;
 }
+
+tr td:last-child {
+  border-left: 1px dotted red;
+} */
 
 .font {
   font-size: 20px;
   font-style: bold;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.red {
+  background-color: red;
 }
